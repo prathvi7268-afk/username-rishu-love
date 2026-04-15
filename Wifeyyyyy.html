@@ -1,0 +1,78 @@
+<!DOCTYPE html><html>
+<head>
+  <title>For My Love ❤️</title>
+  <style>
+    body {
+      text-align: center;
+      background: linear-gradient(135deg, #ff9a9e, #ff4d6d);
+      font-family: Arial;
+      color: white;
+      padding-top: 100px;
+    }
+    h1 {
+      padding: 20px;
+    }
+    button {
+      padding: 12px 20px;
+      margin: 10px;
+      border: none;
+      border-radius: 25px;
+      background: white;
+      color: #ff4d6d;
+      font-size: 16px;
+      font-weight: bold;
+    }
+  </style>
+</head><body><h1 id="text">Kesi ho ji ❤️</h1>
+<div id="buttons">
+  <button onclick="step1()">Apki hu ji 🤭❤️</button>
+</div><script>
+
+function setButtons(html){
+  document.getElementById("buttons").innerHTML = html;
+}
+
+// Step 1
+function step1(){
+  document.getElementById("text").innerHTML = "Apke Bhondu ne banaya h 🥺👉🏻👈🏻";
+  setButtons('<button onclick="step2()">Next 💖</button>');
+}
+
+// Step 2
+function step2(){
+  document.getElementById("text").innerHTML = "🥺❤️ maaf kr dijiye na please";
+  setButtons(`
+    <button onclick="step3()">Kr dia baby 😿💗</button>
+    <button onclick="no1()">No 😡</button>
+  `);
+}
+
+// NO loop for sorry
+function no1(){
+  document.getElementById("text").innerHTML = "Maaf krna hoga 😤💗";
+  setButtons('<button onclick="step3()">Yes ji 😌💗</button>');
+}
+
+// Step 3 (proposal)
+function step3(){
+  document.getElementById("text").innerHTML = "Will you marry me 🤭❤️😭";
+  setButtons(`
+    <button onclick="final()">Yes 💍💗</button>
+    <button onclick="no2()">No 😡</button>
+  `);
+}
+
+// NO loop for marriage
+function no2(){
+  document.getElementById("text").innerHTML = "Eeeee chup chap hn boliye 😡💗";
+  setButtons('<button onclick="final()">Yes ji 😳💗</button>');
+}
+
+// Final
+function final(){
+  document.getElementById("text").innerHTML = "I'll never leave you mera bachcha 😭🫶🏻💗💗<br>I'm always with you 💗";
+  setButtons('');
+}
+
+</script></body>
+</html>
